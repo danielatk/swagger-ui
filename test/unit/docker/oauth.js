@@ -30,6 +30,7 @@ describe("docker: env translator - oauth block", function() {
     ui.initOAuth({
       clientId: "",
       clientSecret: "",
+      audience: "",
       realm: "",
       appName: "",
       scopeSeparator: "",
@@ -43,6 +44,7 @@ describe("docker: env translator - oauth block", function() {
     const input = {
       OAUTH_CLIENT_ID: `myId`,
       OAUTH_CLIENT_SECRET: `mySecret`,
+      OAUTH_AUDIENCE: `myAudience`,
       OAUTH_REALM: `myRealm`,
       OAUTH_APP_NAME: `myAppName`,
       OAUTH_SCOPE_SEPARATOR: "%21",
@@ -55,6 +57,7 @@ describe("docker: env translator - oauth block", function() {
     ui.initOAuth({
       clientId: "myId",
       clientSecret: "mySecret",
+      audience: "myAudience",
       realm: "myRealm",
       appName: "myAppName",
       scopeSeparator: "%21",
